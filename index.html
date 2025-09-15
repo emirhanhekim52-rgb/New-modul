@@ -165,8 +165,8 @@ button { cursor: pointer; }
       if (qty > 325) qty = 325;
 
       // *** MDF ANA HESAP ***
-      // 1) Liste fiyatını düzelt (÷1.08 × 1.2)
-      const adjusted = (listPrice / 1.08) * 1.2;
+      // 1) Liste fiyatını düzelt (÷1.08÷1.03(bayi_primi)  × 1.2)
+      const adjusted = (listPrice / 1.08 / 1.03) * 1.2;
 
       // 2) Kar marjı uygula (gösterme)
       const marj = marginByQty(qty);
